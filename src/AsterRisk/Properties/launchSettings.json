@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "ASTER - Demo": {
+      "commandName": "Project",
+      "commandLineArgs": "demo --threads 2",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "ASTER - Web": {
+      "commandName": "Project",
+      "commandLineArgs": "web --master 127.0.0.1:7400 --url http://127.0.0.1:8093/",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "ASTER - Master": {
+      "commandName": "Project",
+      "commandLineArgs": "master --listen 127.0.0.1:7400 --workers 127.0.0.1:7401,127.0.0.1:7402 --data data",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "ASTER - Worker 1": {
+      "commandName": "Project",
+      "commandLineArgs": "worker --listen 127.0.0.1:7401 --threads 2",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    },
+    "ASTER - Worker 2": {
+      "commandName": "Project",
+      "commandLineArgs": "worker --listen 127.0.0.1:7402 --threads 2",
+      "workingDirectory": "$(ProjectDir)..\\.."
+    }
+  }
+}

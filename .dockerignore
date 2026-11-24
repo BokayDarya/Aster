@@ -1,0 +1,12 @@
+**/bin
+**/obj
+data
+runtime
+tmp
+output
+docs
+tests
+tools
+.env
+*.docx
+*.pdf
